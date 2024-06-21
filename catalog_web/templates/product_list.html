@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product list</h1>
+
+        <form id="search-form" >
+            <input type="text" name="q" id="search-input" placeholder="Search products..." value="{{ query }}"/>
+            <button type="submit">Search</button>
+            <button type="button" id="all-products">All products</button>
+        </form>
+
+
+        <ul id="product-list" class="list-group">
+            {% for product in products %}
+            <li class="list-group-item">
+                <h3>{{ product.name }}</h3>
+                <p>SKU: {{ product.sku }}</p>
+                <p>Price: {{ product.price }}</p>
+                <p>Brand: {{ product.brand }}</p>
+                <a href="{% url 'product-detail' pk=product.id %}">See details</a>
+
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+<script>
+    async function fetchProducts(query = '') {
+        const response = await fetch(`/api/product/list/?q=${query}`);
+        const products = await response.json();
+        const productList = document.getElementById('product-list');
+        productList.innerHTML = '';
+        products.forEach(product => {
+            const li = document.createElement('li');
+            li.classList.add('list-group-item');
+            li.innerHTML = `
+                <h3>${product.name}</h3>
+                <p>SKU: ${product.sku}</p>
+                <p>Price: ${product.price}</p>
+                <p>Brand: ${product.brand}</p>
+                <a href="/product/${product.id}">See details</a>
+            `;
+            productList.appendChild(li);
+        });
+    }
+
+    document.getElementById('search-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = document.getElementById('search-input').value;
+        fetchProducts(query);
+    });
+
+    document.getElementById('all-products').addEventListener('click', (e) => {
+        e.preventDefault();
+        fetchProducts();
+    });
+
+</script>
+</html>
