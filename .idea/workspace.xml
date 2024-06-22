@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72719266-0b9e-4a08-affd-271c1a51ab03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_admin_user_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_login_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_product_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_product_detail_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog_api/management/commands/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog_api/management/commands/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog_api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog_api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog_api/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog_api/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog_api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog_api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog_web/templates/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog_web/templates/product_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog_web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog_web/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zebrands/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zebrands/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +225,7 @@
       <updated>1718959193726</updated>
       <workItem from="1718959199624" duration="16876000" />
       <workItem from="1718984943733" duration="8813000" />
-      <workItem from="1719057349195" duration="22815000" />
+      <workItem from="1719057349195" duration="25650000" />
     </task>
     <servers />
   </component>
