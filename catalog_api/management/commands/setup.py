@@ -1,5 +1,6 @@
 from django.contrib.auth.models import Group, Permission, User
 from django.core.management.base import BaseCommand
+from rest_framework.authtoken.models import Token
 
 
 class Command(BaseCommand):
@@ -27,7 +28,9 @@ class Command(BaseCommand):
             is_staff=True,
             is_superuser=True
         )
-
+        # Creating token authentication
+        token, created = Token.objects.get_or_create(user=admin_user)
+        print(token.key)
         # the new admin user adding in the group
         admin_user.groups.add(admin_group)
 
