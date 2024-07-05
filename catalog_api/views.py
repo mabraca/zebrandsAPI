@@ -9,6 +9,10 @@ from rest_framework.views import APIView
 from .models import Product, Log
 from .serializers import ProductSerializer, AdminUserSerializerUpdate, AdminUserSerializerCreate
 
+class ProductChannel(generics.ListCreateAPIView):
+    def get_queryset(self):
+    #TODO
+
 """
 Class ProductListCreateAPIView calls serializers to get, update and create products
 Permission class ensures that only authenticated users can create, update or delete products, while anyone can see them.
